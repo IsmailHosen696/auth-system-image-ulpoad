@@ -1,0 +1,35 @@
+<%- include('./partials/header') %>
+    <%- include("./lognav") %>
+        <div class="reg-container">
+            <h1 class="login-txt">Register</h1>
+            <%- include("./partials/message.ejs") %>
+                <form action="/register" method="POST">
+                    <div class="nam">
+                        <label class="label" for="name">Name</label>
+                        <input class="name-input" type="text" value="<%= typeof name !='undefined' ? name : '' %>"
+                            name="name" id="name">
+                        <span class="namErr"></span>
+                    </div>
+                    <div class="emai">
+                        <label class="label" for="email">Email</label>
+                        <input class="email-input" type="email" value="<%= typeof email !='undefined' ? email : '' %>"
+                            name="email" id="email">
+                        <span class="emailErr"></span>
+                    </div>
+                    <div class="pass">
+                        <label class="label" for="password">Password</label>
+                        <input class="pass-inp" type="password" name="password" id="password">
+                        <span class="passErr"></span>
+                    </div>
+                    <div class="pass">
+                        <label class="label" for="c-password">Confirm Password</label>
+                        <input class="c-pass-inp" type="password" name="confirmPassword" id="c-password">
+                        <span class="cpassErr"></span>
+                    </div>
+                    <button class="btn-reg" type="submit">Register</button>
+                </form>
+                <p class="regPage">Already Have An Account?<a href="/login"> Login</a></p>
+        </div>
+        <script src="js/register.js"></script>
+
+        <%- include('./partials/footer') %>

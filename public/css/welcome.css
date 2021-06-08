@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@1,300&display=swap");
+@import "other/login.css";
+@import "other/register.css";
+@import "other/index.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,25 @@
+<%- include('./partials/header') %>
+    <%- include("./lognav") %>
+
+        <div class="login-container">
+            <h1 class="login-txt">Login</h1>
+            <%- include("./partials/message.ejs") %>
+                <form action="/login" method="POST">
+                    <div class="emai">
+                        <label class="label" for="email">Email</label>
+                        <input class="email-input" type="email" value="<%= typeof email !='undefined' ? email : '' %>"
+                            name="email" id="email">
+                        <span class="emailErr"></span>
+                    </div>
+                    <div class="pass">
+                        <label class="label" for="password">Password</label>
+                        <input class="pass-inp" type="password" name="password" id="password">
+                        <span class="passErr"></span>
+                    </div>
+                    <button class="btn-login" type="submit">Login</button>
+                </form>
+                <p class="logPage">Don't Have An Account?<a href="/register"> Register</a></p>
+        </div>
+
+        <script src="js/login.js"></script>
+        <%- include('./partials/footer') %>

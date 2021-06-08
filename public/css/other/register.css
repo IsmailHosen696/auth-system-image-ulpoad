@@ -1,0 +1,143 @@
+.reg-container {
+  width: 40rem;
+  box-shadow: 0px 0px 11px -7px rgba(0, 0, 0, 0.96);
+  margin: 3em auto;
+  border-radius: 5px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.name-input {
+  margin: auto;
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 2em;
+  padding-left: 1em;
+  font-size: 1em;
+  outline: none;
+}
+.email-input {
+  margin: auto;
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 2em;
+  padding-left: 1em;
+  font-size: 1em;
+  outline: none;
+}
+.pass-inp {
+  margin: auto;
+  width: 95%;
+  height: 2em;
+  padding-left: 1em;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.c-pass-inp {
+  margin: auto;
+  width: 95%;
+  height: 2em;
+  padding-left: 1em;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.nam {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  position: relative;
+}
+.emai {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  position: relative;
+}
+.pass {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 2em;
+}
+.label {
+  position: absolute;
+  top: -1.5em;
+  left: 0.5em;
+}
+.btn-reg {
+  width: 35rem;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 3em;
+  letter-spacing: 2px;
+  left: 2.5em;
+  background-color: rgb(223, 71, 85);
+  color: #fff;
+  bottom: 0em;
+}
+.regPage {
+  position: relative;
+  bottom: -2em;
+}
+.regPage > a {
+  color: black;
+  text-decoration: none;
+}
+.regPage > a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 850px) {
+  .reg-container {
+    width: 30rem;
+  }
+  .btn-reg {
+    width: 24rem;
+  }
+}
+@media (max-width: 570px) {
+  .reg-container {
+    width: 25rem;
+    margin: 1em auto;
+  }
+  .btn-reg {
+    width: 20rem;
+  }
+}
+@media (max-width: 450px) {
+  .reg-container {
+    width: 20rem;
+  }
+  .btn-reg {
+    width: 16rem;
+  }
+  .regPage {
+    width: 14rem;
+    text-align: center;
+  }
+}
+@media (max-width: 365px) {
+  .reg-container {
+    width: 17rem;
+  }
+  .btn-reg {
+    width: 13rem;
+  }
+}
+@media (max-width: 220px) {
+  .reg-container {
+    width: 13rem;
+  }
+  .btn-reg {
+    width: 5rem;
+  }
+}

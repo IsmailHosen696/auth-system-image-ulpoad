@@ -1,0 +1,7 @@
+<% if(typeof error !='undefined' ){ %>
+    <% error.forEach((error)=>{ %>
+        <p style="color: red; width: 100%; text-align: center;">
+            <%= error.msg %>
+        </p>
+        <% }) %>
+            <% } %>
