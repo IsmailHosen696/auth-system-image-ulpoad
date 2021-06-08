@@ -63,7 +63,7 @@ router.post('/login', (req, res) => {
             bcrypt.compare(password, user.password, (err, isMatch) => {
                 if (isMatch) {
                     const token = createToken(user._id);
-                    res.cookie('user', token);
+                    res.cookie('user', token, { maxAge: maxage * 1000 });
                     res.redirect('/');
                 } else {
                     error.push({ msg: "password is not matching!" });
