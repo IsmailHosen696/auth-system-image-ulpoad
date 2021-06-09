@@ -1,0 +1,23 @@
+<%- include('./partials/header.ejs') %>
+    <div class="add-container">
+
+        <h1>Add Memo</h1>
+        <form method="POST" enctype="multipart/form-data" action="/add">
+            <input style="position: absolute; left: -11111px;" type="text" name="uid" value="<%= loguserId %>" id="">
+            <div class="title">
+                <label for="title">Memorie Title</label>
+                <input required type="text" name="title" id="title">
+            </div>
+            <div class="desc">
+                <label for="desc">Memorie Description</label>
+                <textarea name="desc" id="desc"></textarea>
+            </div>
+            <div class="img">
+                <label for="img">Memorie Photo</label>
+                <input required type="file" name="image" id="img">
+            </div>
+            <button class="add-btn">Add Memo</button>
+        </form>
+        <a href="/" class="canbtn">cancel</a>
+    </div>
+    <%- include('./partials/footer.ejs') %>

@@ -2,6 +2,7 @@
 @import "other/login.css";
 @import "other/register.css";
 @import "other/index.css";
+@import "other/todo.css";
 
 * {
   margin: 0;

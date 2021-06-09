@@ -1,0 +1,148 @@
+.add-container {
+  width: 40rem;
+  box-shadow: 0px 0px 11px -7px rgba(0, 0, 0, 0.96);
+  margin: 3em auto;
+  border-radius: 5px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.title {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto 2em auto;
+}
+.desc {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em auto 2em auto;
+}
+#title {
+  width: 100%;
+  margin: 0.5em 0 0.5em 0;
+  height: 2.5em;
+  padding-left: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+}
+#desc {
+  width: 100%;
+  resize: none;
+  height: 5em;
+  outline: none;
+  margin: 0.5em 0 0.5em 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 10px;
+}
+.add-btn {
+  width: 82%;
+  height: 1.5em;
+  font-size: 1.5em;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 0, 62, 0.884);
+  left: 2.8em;
+  bottom: 1em;
+  border-radius: 5px;
+}
+.add-btn:hover {
+  background-color: rgba(194, 7, 54, 0.884);
+}
+.img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.canbtn {
+  position: absolute;
+  bottom: -3em;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(255, 0, 62, 0.884);
+  padding: 0.5em 10em;
+  font-size: 1em;
+  border-radius: 5px;
+}
+.canbtn:hover {
+  background-color: rgba(255, 61, 110, 0.884);
+}
+@media screen and (max-width: 984px) {
+  .add-btn {
+    left: 2.5em;
+  }
+}
+@media screen and (max-width: 800px) {
+  .add-container {
+    width: 35rem;
+  }
+  .add-btn {
+    left: 2.5em;
+  }
+}
+@media screen and (max-width: 650px) {
+  .add-container {
+    width: 30rem;
+  }
+  .canbtn {
+    padding: 0.5em 5em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .add-btn {
+    left: 2.3em;
+  }
+  .add-container {
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  #desc,
+  #title {
+    width: 90%;
+  }
+  .add-container {
+    width: 23rem;
+  }
+  .add-btn {
+    left: 1.6em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .add-container {
+    width: 20rem;
+  }
+  .img {
+    width: 50%;
+  }
+  #img {
+    display: flex;
+    width: 15em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .add-btn {
+    width: 8em;
+  }
+  .add-container {
+    width: 17rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .add-container {
+    width: 100%;
+  }
+  .add-btn {
+    left: 1em;
+  }
+}

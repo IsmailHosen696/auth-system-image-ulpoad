@@ -5,21 +5,11 @@
         </div>
         <div class="right">
             <ul class="ul">
-                <% if(user){ %>
-                    <li class="li"><a href="#" class="li-a">
-                            <%= user.name %>
-                        </a></li>
-                    <li class="li"><a href="/memo/<%= user._id %>" class="li-a">
-                            Memories
-                        </a></li>
-                    <li class="li"><a href="/add" class="li-a">
-                            Add Memories
-                        </a></li>
-                    <li class="li"><a href="/logout" class="li-a">Logout</a></li>
-                    <% } else { %>
-                        <li class="li"><a href="/login" class="li-a">Login</a></li>
-                        <li class="li"><a href="/register" class="li-a">Register</a></li>
-                        <% } %>
+                <li class="li"><a href="#" class="li-a">
+                    </a></li>
+                <li class="li"><a href="/add" class="li-a">
+                        Add Memories
+                    </a></li>
             </ul>
         </div>
         <div class="bar-div">

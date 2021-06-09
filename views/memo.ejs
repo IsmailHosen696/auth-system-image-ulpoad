@@ -1,0 +1,17 @@
+<%- include('./partials/header') %>
+    <%- include('./memnav.ejs') %>
+        <% data.forEach((data)=>{ %>
+
+            <h1>
+                <%= data.title %>
+            </h1>
+            <h4>
+                <%= data.desc %>
+            </h4>
+            <h6>
+                <%= data.date.toLocaleDateString() %>
+            </h6>
+            <img src="<%= data.imagepath %>" height="200" width="350" alt="">
+            <% }) %>
+
+                <%- include('./partials/footer') %>
