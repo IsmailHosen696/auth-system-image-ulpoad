@@ -4,15 +4,7 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { verifyuser } = require('../../config/protectroute');
-let loguserId;
-const fs = require('fs');
-const Memorie = require('../models/Memorie');
-const path = require('path');
-const multer = require('multer');
-const uploadPath = path.join('public', Memorie.coverImageBasePath);
-const upload = multer({
-    dest: uploadPath,
-});
+
 router.get('/', verifyuser, (req, res) => {
     const uid = req.userId;
     User.findOne({ _id: uid }).then(user => {
@@ -86,46 +78,5 @@ router.post('/login', (req, res) => {
     })
 });
 
-router.get('/memo/:id', async (req, res) => {
-    const uid = req.params.id;
-    const data = await Memorie.find({ uid }).sort({ date: 'desc' })
-    res.render('memo', { data });
-});
-
-router.get('/add', verifyuser, (req, res) => {
-    const uid = req.userId;
-    User.findOne({ _id: uid }).then(user => {
-        loguserId = user._id
-        res.render('add', { loguserId: user._id })
-    });
-});
-
-router.post('/add', upload.single('image'), async (req, res) => {
-    const filename = req.file != null ? req.file.filename : null
-    let memo = new Memorie({
-        title: req.body.title,
-        desc: req.body.desc,
-        uid: req.body.uid,
-        imagename: filename
-    });
-    try {
-        const newMemo = await memo.save();
-        res.redirect(`/memo/${loguserId}`);
-    } catch (error) {
-        console.log(error);
-        if (book.imagename != null) {
-            removeBookCover(book.imagename)
-        }
-        res.render('add', { loguserId })
-    }
-});
-
-function removeBookCover(filename) {
-    fs.unlink(path.join(uploadPath, filename), err => {
-        if (err) {
-            console.log(err);
-        }
-    });
-};
 
 module.exports = router;

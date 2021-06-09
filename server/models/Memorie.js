@@ -15,7 +15,11 @@ const MemoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imagename: {
+    image: {
+        type: Buffer,
+        required: true
+    },
+    imageType: {
         type: String,
         required: true
     },
@@ -27,10 +31,9 @@ const MemoSchema = new mongoose.Schema({
 })
 
 MemoSchema.virtual('imagepath').get(function () {
-    if (this.imagename != null) {
-        return path.join('/', coverImageBasePath, this.imagename)
+    if (this.image != null && this.imageType != null) {
+        return `data:${this.imageType};charset=utf-8;base64,${this.image.toString('base64')}`
     }
 })
 
 module.exports = mongoose.model('Memo', MemoSchema);
-module.exports.coverImageBasePath = coverImageBasePath;

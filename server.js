@@ -9,11 +9,12 @@ connection();
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ limit: '10mb', extended: false }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.use('/', router);
+app.use('/', require('./server/router/memroute'));
 
 
 app.listen(port, () => console.log(`server started on http://localhost:${port}`));
